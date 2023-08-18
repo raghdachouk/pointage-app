@@ -16,7 +16,6 @@
           "alias": {
             "@controllers": "./src/controllers",
             "@routes": "./src/routes",
-            "@mockData": "./src/mockData",
             "@utils": "./src/utils"
           }
         }
