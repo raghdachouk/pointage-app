@@ -1,20 +1,12 @@
-import { MongoClient } from "mongodb";
+import mongoose from "mongoose";
+import 'dotenv/config'
 
-const connectionString =
-  process.env.ATLAS_URI ||
-  "mongodb+srv://choukraghda:raghdach055@cluster0.vefxv2x.mongodb.net/pointage?retryWrites=true&w=majority";
-console.log("connectionString: ", connectionString);
+const connectionString= process.env.ATLAS_URI
 
-const client = new MongoClient(connectionString);
-const connexion = async () => {
-  let conn;
-  try {
-    conn = await client.connect();
-  } catch (e) {
-    console.error(e);
-  }
+const initDatabase = async () =>
+  mongoose.connect(connectionString, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 
-  conn.db("sample_training");
-};
-
-export default connexion;
+export default initDatabase;
