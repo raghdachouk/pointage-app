@@ -13,8 +13,6 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.17.3",
-    "lodash": "^4.17.21",
-    "mongodb": "^5.7.0",
     "mongoose": "^7.4.3",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
@@ -24,7 +22,6 @@
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
     "babel-plugin-module-resolver": "^4.1.0",
-    "jest": "^28.1.0",
     "nodemon": "^2.0.15",
     "supertest": "^6.2.3"
   }

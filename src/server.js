@@ -4,7 +4,6 @@ import cors from "cors";
 import Express from "express";
 import { createServer } from "http";
 
-import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from "swagger-ui-express";
 
 import routes from "@routes";
