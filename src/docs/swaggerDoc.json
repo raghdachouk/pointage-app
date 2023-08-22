@@ -1,0 +1,99 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Employee Pointage API",
+      "version": "1.0.0",
+      "description": "API for managing employee pointage"
+    },
+    "host": "localhost:3030",
+    "basePath": "/",
+    "schemes": [
+      "http"
+    ],
+    "paths": {
+      "/employees/addEmployee": {
+        "post": {
+          "tags": ["Employees"],
+          "summary": "Create a new employee",
+          "parameters": [
+            {
+              "name": "employee",
+              "in": "body",
+              "description": "Employee object",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Employee"
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "Employee created"
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          }
+        }
+       
+      },
+      "/employees/getAllEmployees": {
+        "get": {
+          "tags": ["Employees"],
+          "summary": "Get a list of all employees",
+          "responses": {
+            "200": {
+              "description": "List of employees retrieved successfully",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Employee"
+                }
+              }
+            },
+            "500": {
+              "description": "Internal server error"
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "Employee": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string"
+          },
+          "dateCreated":{
+            "type": "string"
+          },
+          "checkIn":{
+            "type": "string"
+          },
+          "checkInComment": {
+            "type": "string"
+          },
+          "checkOut":{
+            "type": "string"
+          },
+          "checkOutComment": {
+            "type": "string"
+          },
+          "checkInCheckOutTime": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+  

@@ -17,7 +17,8 @@
             "@controllers": "./src/controllers",
             "@routes": "./src/routes",
             "@config": "./src/config",
-            "@models": "./src/models"
+            "@models": "./src/models",
+            "@utils": "./src/utils"
           }
         }
       ]

@@ -10,9 +10,9 @@ const employeeSchema = new mongoose.Schema({
   checkInComment: String,
   checkOut: Date,
   checkOutComment: String,
-  checkInCheckOutTime: Number,
+  checkInCheckOutTime: String,
 });
 
-const EmployeeModel = mongoose.model('employee', employeeSchema);
+const EmployeeModel = mongoose.model("employee", employeeSchema);
 
 export default EmployeeModel;

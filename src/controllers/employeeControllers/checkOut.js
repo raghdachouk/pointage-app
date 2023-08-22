@@ -1,4 +1,5 @@
 import EmployeeModel from "@models/employee";
+import { timeDifference } from "@utils/timeDifference";
 
 export const checkOut = async (req, res) => {
   try {
@@ -17,8 +18,11 @@ export const checkOut = async (req, res) => {
     employee.checkOut = new Date();
     employee.checkOutComment = comment;
 
-    const timeDiff = employee.checkOut - employee.checkIn;
-    employee.checkInCheckOutTime = timeDiff;
+    employee.checkInCheckOutTime = timeDifference(
+      employee.checkIn,
+      employee.checkOut
+    );
+
     await employee.save();
     return res.status(200).json({ success: true, result: employee });
   } catch (error) {
