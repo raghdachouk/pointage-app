@@ -1,8 +1,8 @@
-import 'dotenv';
+import "dotenv";
 import bodyParser from "body-parser";
 import cors from "cors";
 import Express from "express";
-import { createServer } from 'http';
+import { createServer } from "http";
 
 import routes from "@routes";
 import initDatabase from "./config/connexion";
